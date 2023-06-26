@@ -1,5 +1,4 @@
-<p align="center"><h2>MQTT connectivity for the Ikea VINDRIKTNING</h2></p>
-
+# MQTT connectivity for the Ikea VINDRIKTNING
 
 This repository contains an ESP8266 firmware, which adds MQTT to the Ikea VINDRIKTNING PM2.5 air quality sensor.
 The modification  doesn't interfere with normal operation of the device in any way.
@@ -51,11 +50,10 @@ For this, you will need to add ESP8266 support to it by [using the Boards Manage
 
 Furthermore, you will also need to install the following libraries using the Library Manager:
 
-* ArduinoOTA 1.0.3
-* ArduinoJSON 6.10.1
-* PubSubClient 2.8.0
-* WiFiManager 0.15.0
-
+- ArduinoOTA 1.0.3
+- ArduinoJSON 6.10.1
+- PubSubClient 2.8.0
+- WiFiManager 0.15.0
 
 Just build, flash, and you're done.
 
@@ -63,11 +61,11 @@ When connecting everything up, you should see an open Wi-Fi Access Point to conf
 
 ## Low-Noise Mod
 
-**Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it. 
+**Note:** The intent of this section is only to document that this is possible. I don't "recommend" doing this nor do I advise against it.
 
 As you might've noticed, there's a fan in there, which is audible even multiple meters away.
 
-For some reason, the Ikea uC firmware decides to toggle the fan on and off every minute 
+For some reason, the Ikea uC firmware decides to toggle the fan on and off every minute
 or so causing the noise it makes to change and therefore it constantly stays noticeable.
 
 Good thing is that the Fan does spin up fine with just 3.3V, which means that we can run it constantly from the
@@ -78,7 +76,6 @@ At 3.3V its noise is barely noticeable from 50 cm away.
 ![3.3v](./img/3.3v.jpg)
 
 Having the Fan not connected at all was also tried but proved to mess up all readings completely.
-
 
 This is of course a more invasive modification than just adding Wi-Fi data logging.
 Though, given that it is just a €10 device, I'm fine with that.
@@ -99,7 +96,6 @@ As reported in #16, the transitions from Green to Yellow and Yellow to Red in th
 ## ToDo
 
 Reconfiguration of a provisioned device without having to OTAU a firmware that clears the settings would be nice.
-
 
 ## References and sources
 
